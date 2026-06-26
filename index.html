@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ===== SEO / 搜尋與分享 ===== -->
+<title>汗娜營養師｜減脂線上諮詢預約</title>
+<meta name="description" content="居家護理師＋營養師汗娜，提供 45 分鐘一對一線上減脂諮詢。填寫簡單問診後即可免費預約，吃得飽也能瘦。">
+<meta name="keywords" content="減脂,營養師,線上諮詢,減重,體脂,飲食規劃,汗娜營養師">
+<meta name="author" content="汗娜營養師 Hanna">
+<meta name="theme-color" content="#6e8170">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🥗%3C/text%3E%3C/svg%3E">
+<!-- 社群分享卡（IG/FB/LINE 貼連結時的預覽） -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="汗娜營養師｜減脂線上諮詢預約">
+<meta property="og:description" content="45 分鐘一對一線上減脂諮詢，免費預約。吃得飽也能瘦。">
+<meta property="og:url" content="https://sampqoo07-ai.github.io/glow-up-lab/">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://sampqoo07-ai.github.io/glow-up-lab/">
+<!-- 之後有分享圖再加：<meta property="og:image" content="https://sampqoo07-ai.github.io/glow-up-lab/og-cover.jpg"> -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --morandi-dark:#6e8170; --morandi-mid:#8a9a8b; --morandi-light:#b3c0a4;
+    --gold:#c9a44a; --red:#c97a6a; --bg:#f5e6c8; --card:#fffdf7;
+    --text:#1a1a1a; --sub:#4a4a4a; --border:#d9cba8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Noto Sans TC','DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.75}
+  .wrap{max-width:600px;margin:0 auto;padding:0 18px}
+  section{margin-top:34px}
+  .sec-title{font-size:1.15rem;color:var(--morandi-dark);font-weight:700;margin:0 4px 14px;display:flex;align-items:center;gap:9px}
+  .sec-title::before{content:"";width:5px;height:20px;background:var(--gold);border-radius:3px}
+
+  /* Hero */
+  .hero{background:linear-gradient(135deg,#6e8170 0%,#8a9a8b 55%,#b3c0a4 100%);color:#fff;border-radius:0 0 30px 30px;padding:50px 28px 40px;text-align:center}
+  .badge{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);padding:6px 15px;border-radius:20px;font-size:.78rem;letter-spacing:1px;margin-bottom:18px}
+  .hero h1{font-size:1.8rem;font-weight:700;margin-bottom:12px;line-height:1.4}
+  .hero p{font-size:.98rem;opacity:.95;font-weight:300}
+  .hero .gold{color:#ffe9b0;font-weight:500}
+  .cta{display:inline-block;margin-top:22px;background:var(--gold);color:#fff;padding:13px 34px;border-radius:30px;font-size:1rem;font-weight:500;text-decoration:none;box-shadow:0 6px 16px rgba(201,164,74,.4);transition:.2s}
+  .cta:hover{transform:translateY(-2px)}
+
+  /* Trust */
+  .trust{display:flex;gap:10px}
+  .trust div{flex:1;background:var(--card);border:1px solid var(--border);border-radius:15px;padding:16px 8px;text-align:center}
+  .trust b{display:block;color:var(--morandi-dark);font-size:1.35rem}
+  .trust small{font-size:.74rem;color:var(--sub)}
+
+  /* Steps how-it-works */
+  .how{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:8px 20px}
+  .how .step{display:flex;gap:14px;padding:16px 0;border-bottom:1px dashed var(--border)}
+  .how .step:last-child{border:none}
+  .how .n{flex:0 0 34px;height:34px;border-radius:50%;background:var(--morandi-light);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600}
+  .how b{font-size:.96rem}.how span{font-size:.85rem;color:var(--sub)}
+
+  /* Booking embed */
+  .embed-box{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:8px;box-shadow:0 6px 22px rgba(110,129,112,.10);min-height:580px}
+  #cal-inline{width:100%;min-height:600px;border-radius:14px}
+  /* 尚未填入 Cal.com 連結時顯示的提示（上線後會被預約畫面蓋掉） */
+  .embed-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;height:560px;text-align:center;color:var(--sub);padding:24px}
+  .embed-placeholder .ico{width:60px;height:60px;border-radius:50%;background:var(--morandi-light);color:#fff;font-size:1.6rem;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+
+  /* Testimonials */
+  .quote{background:var(--card);border:1px solid var(--border);border-radius:15px;padding:18px 20px;margin-bottom:12px;font-size:.92rem}
+  .quote .who{font-size:.76rem;color:var(--sub);margin-top:8px}
+  .quote .stars{color:var(--gold);font-size:.85rem}
+
+  /* FAQ */
+  details{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:14px 18px;margin-bottom:10px}
+  summary{font-weight:500;font-size:.92rem;cursor:pointer;list-style:none;display:flex;justify-content:space-between}
+  summary::after{content:"+";color:var(--gold);font-weight:700}
+  details[open] summary::after{content:"–"}
+  details p{font-size:.86rem;color:var(--sub);margin-top:10px}
+
+  footer{text-align:center;font-size:.78rem;color:var(--sub);margin:40px 0 30px;padding:0 18px}
+  footer a{color:var(--morandi-dark)}
+</style>
+</head>
+<body>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <div class="badge">汗娜營養師 · 線上減脂諮詢</div>
+    <h1>30 天，找回吃得飽<br>又會瘦的節奏</h1>
+    <p>居家護理師＋營養師汗娜，陪你一對一線上面談<br><span class="gold">首次免費</span>，先填簡單問診再選時段</p>
+    <a href="#book" class="cta">免費預約諮詢 →</a>
+  </header>
+
+  <div class="wrap">
+
+    <!-- ===== TRUST ===== -->
+    <section class="trust">
+      <div><b>45<small style="font-size:.7rem">分</small></b><small>一對一視訊</small></div>
+      <div><b>免費</b><small>首次諮詢</small></div>
+      <div><b>即時</b><small>線上選位不撞號</small></div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section>
+      <div class="sec-title">怎麼進行</div>
+      <div class="how">
+        <div class="step"><div class="n">1</div><div><b>選時段</b><br><span>挑一個方便的時間，線上即時卡位</span></div></div>
+        <div class="step"><div class="n">2</div><div><b>填減脂問診</b><br><span>目標、飲食、身體狀況，面談前我先掌握</span></div></div>
+        <div class="step"><div class="n">3</div><div><b>收確認信</b><br><span>自動寄出視訊連結，面談前一天提醒你</span></div></div>
+        <div class="step"><div class="n">4</div><div><b>線上面談</b><br><span>45 分鐘給你清楚的減脂方向</span></div></div>
+      </div>
+    </section>
+
+    <!-- ===== BOOKING（Cal.com 嵌入區）===== -->
+    <section id="book">
+      <div class="sec-title">選擇你方便的時段</div>
+      <div class="embed-box">
+        <!-- Cal.com 會把預約日曆載入到這個空 div 裡 -->
+        <div id="cal-inline"></div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section>
+      <div class="sec-title">客戶都怎麼說</div>
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        「第一次有人把我亂吃的問題講清楚，30 分鐘比我自己摸索三個月還有用。」
+        <div class="who">— 外食上班族 · 月減 3.2kg</div>
+      </div>
+      <div class="quote">
+        <div class="stars">★★★★★</div>
+        「不是叫我餓肚子，是教我怎麼吃飽又瘦，這樣才撐得久。」
+        <div class="who">— 產後媽媽 · 找回體力</div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section>
+      <div class="sec-title">常見問題</div>
+      <details><summary>首次諮詢真的免費嗎？</summary><p>是的，首次 45 分鐘線上諮詢免費，讓你先了解方向、我也先認識你的狀況，沒有任何隱藏費用。</p></details>
+      <details><summary>要用什麼軟體面談？</summary><p>預約完成後系統會自動寄給你一個視訊連結（Google Meet / Cal Video），時間到點開即可，不用另外安裝。</p></details>
+      <details><summary>臨時不能來怎麼辦？</summary><p>確認信裡有「改期」按鈕，可以自己改到其他空檔，麻煩盡量提前讓我知道。</p></details>
+      <details><summary>諮詢前要準備什麼？</summary><p>填問診時誠實填寫飲食和身體狀況就好，若有近期健檢報告可以面談時一起看。</p></details>
+    </section>
+
+  </div>
+
+  <footer>
+    汗娜營養師 Hanna · 居家護理師 ＋ 營養師<br>
+    <a href="https://www.instagram.com/glow_up_lab2025" target="_blank" rel="noopener">@glow_up_lab2025 · 汗娜營養師 Instagram</a>
+    <p style="margin-top:8px;opacity:.7">本諮詢提供營養衛教建議，不取代醫療診斷與治療。</p>
+  </footer>
+
+<!-- ============================================================
+     Cal.com 官方嵌入程式碼
+     上線步驟：
+     1. 在 Cal.com 建好 Event Type 後，到該活動的 Embed 取得你的 calLink
+        格式通常是 "帳號/活動代稱"，例如 "hanna/30min-fat-loss"
+     2. 把下方的 YOUR_CAL_LINK 換成它，存檔重新部署即可。
+     （在換好之前，上方會顯示佔位提示，不影響其他區塊）
+============================================================ -->
+<script type="text/javascript">
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+
+Cal("init", {origin:"https://cal.com"});
+Cal("inline", {
+  elementOrSelector: "#cal-inline",
+  calLink: "hanna-rshjyv/45min-fat-loss",   /* 汗娜的減脂諮詢預約連結 */
+  layout: "month_view",
+  config: { theme: "light" }
+});
+Cal("ui", {
+  cssVarsPerTheme: { light: { "cal-brand": "#6e8170" } },  /* 品牌色：莫蘭迪綠 */
+  hideEventTypeDetails: true,
+  layout: "month_view"
+});
+</script>
+
+</body>
+</html>
